@@ -17,11 +17,16 @@ if [[ -f ~/.ssh/config ]]; then
   echo "[*] File present: ~/.ssh/config"
   echo
 else
-  echo "[!] File NOT present: ~/.ssh/config"
+  echo "[*] Create file: ~/.ssh/config"
   echo
   echo "Create it or get it from the pendrive!"
-  echo "Bye..."
-  exit 1
+  cat > ~/.ssh/config <<EOF
+Host github.com
+        User dve-dev
+        Hostname github.com
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/gitdvedev
+EOF
 fi
 if [[ -f ~/.ssh/gitdvedev ]]; then
   echo "[*] File present: ~/.ssh/gitdvedev"
