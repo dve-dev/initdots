@@ -1,6 +1,6 @@
 #!/bin/sh
 echo
-echo "Setup dotfiles:"
+echo "Setup my dotfiles:"
 echo
 if [[ -d ~/.ssh ]]; then
   echo "[*] Directory present: ~/.ssh"
