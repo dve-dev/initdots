@@ -93,6 +93,9 @@ if [[ -d ~/code/dotfiles/.git ]]; then
   echo "And also stow omarchy:"
   rm ~/.config/omarchy/branding/about.txt
   rm ~/.config/omarchy/branding/screensaver.txt
+  mkdir ~/.local/bin
+  mkdir ~/.local/omarchy-dve-dev-mod
+  mkdir ~/.local/share/plymouth
   stow omarchy
   echo
   echo "All is done, now you can run:"
