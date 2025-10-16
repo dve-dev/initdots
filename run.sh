@@ -91,6 +91,8 @@ if [[ -d ~/code/dotfiles/.git ]]; then
   cp ~/code/dotfiles/stow/.stowrc ~/
   echo
   echo "And also stow omarchy:"
+  rm ~/.config/omarchy/branding/about.txt
+  rm ~/.config/omarchy/branding/screensaver.txt
   stow omarchy
   echo
   echo "All is done, now you can run:"
