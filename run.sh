@@ -19,7 +19,6 @@ if [[ -f ~/.ssh/config ]]; then
 else
   echo "[*] Create file: ~/.ssh/config"
   echo
-  echo "Create it or get it from the pendrive!"
   cat > ~/.ssh/config <<EOF
 Host github.com
         User dve-dev
@@ -90,6 +89,14 @@ if [[ -d ~/code/dotfiles/.git ]]; then
   echo
   echo "And copy .stowrc to its place:"
   cp ~/code/dotfiles/stow/.stowrc ~/
+  echo
+  echo "And also stow omarchy:"
+  stow omarchy
+  echo
+  echo "All is done, now you can run:"
+  echo "omarchyctl"
+  echo
+  echo "Bye!"
   echo
 else
   echo "[!] Directory NOT present: ~/code/dotfiles/.git"
